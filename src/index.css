@@ -1,0 +1,56 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  color: #1e1c23;
+  background: #ffffff;
+}
+[id] {
+  scroll-margin-top: 96px;
+}
+:focus-visible {
+  outline: 2px solid #7500ff;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+.on-dark :focus-visible {
+  outline-color: #ffffff;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 70s linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee 70s linear infinite reverse;
+}
+.marquee:hover .animate-marquee,
+.marquee:hover .animate-marquee-reverse {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-marquee-reverse {
+    animation: none;
+  }
+}
