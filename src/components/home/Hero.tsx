@@ -5,6 +5,7 @@ import { trustItems } from '../../data/reviews';
 import { Button } from '../ui/Button';
 import { TrustBadge } from '../ui/TrustBadge';
 import { ShowcaseMarquee } from './ShowcaseMarquee';
+import { CodeRain } from './CodeRain';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -15,6 +16,9 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-[-420px] h-[760px] w-[1200px] -translate-x-1/2 rounded-full bg-brand-lavender opacity-70" />
       
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[640px] lg:h-[760px]">
+        <CodeRain />
+      </div>
       <div className="relative mx-auto max-w-5xl px-5 pb-14 pt-14 text-center lg:pb-16 lg:pt-24">
         <motion.a
           href="#services"
